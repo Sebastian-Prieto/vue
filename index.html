@@ -9,9 +9,11 @@
   <body>
     <div id="data" v-cloak>
       Hello, {{ name }}. Your age is {{ age }}
+      <input type="text" v-model="name">
+      
       <hr />
-      <button v-on:click="isVisible = !isVisible">Show box</button>
-      <div v-if="isVisible" class="box"></div>
+      <button v-on:click="isMarried = !isMarried">Show box</button>
+      <div v-if="isMarried" class="box"></div>
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
@@ -19,8 +21,10 @@
       let app = Vue.createApp({
         data: function () {
           return {
-            name: "Andrea",
-            isVisible: false,
+            name: "Sofía",
+            lastname: "Durán",
+            age: 21,
+            isMarried: true,
           };
         },
       });
